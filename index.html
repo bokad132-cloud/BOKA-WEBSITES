@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M200 110v292l230-146z' fill='%23c6ff3d' stroke='%23c6ff3d' stroke-width='36' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>BOKA | موشن جرافيك ومونتاج</title>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090b07;--tx:#f4f7ec;--mu:#a3aa95;--lime:#c6ff3d;--lt:#c6ff3d;--ink:#0b1100;--rb:rgba(9,11,7,.88);--g1:rgba(255,255,255,.13);--g2:rgba(255,255,255,.03);--gb:rgba(255,255,255,.16);--gh:rgba(255,255,255,.36);--gs:rgba(0,0,0,.35);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f2f6e9;--tx:#12160b;--mu:#566048;--lt:#4d7a00;--rb:rgba(242,246,233,.9);--g1:rgba(255,255,255,.85);--g2:rgba(255,255,255,.45);--gb:#fff;--gh:#fff;--gs:rgba(70,100,0,.16);color-scheme:light}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--tx);font-family:'Readex Pro',system-ui,sans-serif;line-height:1.7;padding-bottom:110px;overflow-x:hidden}
+body::before,body::after{content:"";position:fixed;z-index:-1;border-radius:50%;pointer-events:none}
+body::before{width:340px;height:340px;top:-90px;right:-110px;background:radial-gradient(circle at 40% 40%,rgba(198,255,61,.5),transparent 68%)}
+body::after{width:380px;height:380px;bottom:8%;left:-170px;background:radial-gradient(circle at 60% 40%,rgba(198,255,61,.28),transparent 68%)}
+.wrap{max-width:480px;margin:0 auto;padding:0 16px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+[hidden]{display:none!important}
+
+/* شريط التايم لاين */
+.rule{position:fixed;top:0;left:0;right:0;z-index:30;direction:ltr;height:calc(32px + env(safe-area-inset-top,0px));background:var(--rb);border-bottom:1px solid var(--gb);overflow:hidden}
+.rule::before,.rule::after{content:"";position:absolute;left:0;right:0;bottom:0}
+.rule::before{height:8px;background:repeating-linear-gradient(90deg,var(--mu) 0 1px,transparent 1px 12px)}
+.rule::after{height:15px;background:repeating-linear-gradient(90deg,var(--mu) 0 1px,transparent 1px 60px)}
+.rule b{position:absolute;left:12px;bottom:15px;font-size:11px;font-weight:500;color:var(--mu);font-variant-numeric:tabular-nums;letter-spacing:.1em}
+.head{position:absolute;bottom:0;left:0;width:2px;height:100%;background:var(--lime);will-change:transform}
+.head::before{content:"";position:absolute;top:0;left:-5px;border-style:solid;border-width:9px 6px 0;border-color:var(--lime) transparent transparent}
+
+/* زجاج */
+.gl{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--g1),var(--g2));border:1px solid var(--gb);border-radius:22px;box-shadow:inset 0 1.5px 0 var(--gh),0 6px 14px var(--gs)}
+.gl::before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(120% 80% at 15% -20%,rgba(255,255,255,.24),transparent 55%)}
+.gl>*{position:relative}
+.btn{display:block;flex:1;text-align:center;text-decoration:none;font-weight:700;color:var(--ink);padding:15px;border-radius:18px;background:linear-gradient(180deg,#e4ff8f,var(--lime) 55%,#a8e61a);box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -3px 6px rgba(80,120,0,.35),0 8px 22px rgba(198,255,61,.3);transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn.ghost{color:var(--tx);background:linear-gradient(135deg,var(--g1),var(--g2));border:1px solid var(--gb);box-shadow:inset 0 1.5px 0 var(--gh)}
+
+/* الهيرو */
+.hero{padding:80px 0 4px;text-align:center}
+.ph{position:relative;overflow:hidden;width:124px;height:124px;border-radius:50%;margin:0 auto 26px;display:grid;place-items:center;font-size:48px;font-weight:700;color:var(--ink);background:radial-gradient(circle at 50% 30%,rgba(198,255,61,.25),rgba(9,11,7,.94) 72%);box-shadow:0 0 0 6px var(--bg),0 0 0 8px var(--lime),0 0 60px rgba(198,255,61,.35)}
+.ph .mk{width:68%;height:68%}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.name{position:relative;display:inline-block;padding:4px 28px;font-size:clamp(56px,19vw,88px);font-weight:700;line-height:1.15;letter-spacing:.05em;border:1.5px solid var(--lime)}
+.name span{display:block}
+.name i{position:absolute;width:11px;height:11px;background:var(--bg);border:2px solid var(--lime)}
+.name i:nth-of-type(1){top:-6px;right:-6px}.name i:nth-of-type(2){top:-6px;left:-6px}
+.name i:nth-of-type(3){bottom:-6px;right:-6px}.name i:nth-of-type(4){bottom:-6px;left:-6px}
+.role{margin-top:16px;color:var(--lt);font-weight:500;letter-spacing:.06em;direction:ltr}
+.tag{margin-top:8px;font-size:26px;font-weight:700;line-height:1.4}
+.sub{color:var(--mu);font-size:14px;font-weight:300}
+.hero .sub{margin:8px auto 0;max-width:300px}
+.cta{display:flex;gap:10px;margin-top:26px}
+
+/* الأقسام */
+.sec{padding-top:64px;scroll-margin-top:44px}
+h2{font-size:30px;font-weight:700;line-height:1.3}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/5;padding:14px;text-decoration:none}
+.tile.t1{background:linear-gradient(160deg,rgba(198,255,61,.4),rgba(20,26,10,.92) 70%)}
+.tile.t2{background:linear-gradient(200deg,rgba(198,255,61,.22),rgba(14,18,8,.95) 65%)}
+.tile.t3{background:linear-gradient(140deg,rgba(150,230,40,.3),rgba(16,22,9,.94) 70%)}
+.tile.t4{background:linear-gradient(210deg,rgba(220,255,120,.34),rgba(14,18,8,.95) 68%)}
+.tile strong{display:block;font-size:17px;font-weight:700}
+.tile small{color:var(--mu)}
+.play{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--g1),var(--g2));border:1px solid var(--gb);box-shadow:inset 0 1.5px 0 var(--gh)}
+.play::after{content:"";border:8px solid transparent;border-right:0;border-left:13px solid var(--lime);margin-left:3px}
+.svc{padding:16px}
+.svc h3{font-size:17px;font-weight:700}
+.svc h3::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);margin-inline-end:8px;box-shadow:0 0 12px var(--lime)}
+.svc p{color:var(--mu);font-size:13px;margin-top:6px;font-weight:300}
+
+/* الملفات */
+.search{display:block;margin:16px 0 12px;padding:6px 16px}
+.search input{width:100%;background:none;border:0;color:var(--tx);font:inherit;padding:10px 0;outline:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px}
+.chip{flex:none;border:1px solid var(--gb);background:var(--g1);color:var(--tx);border-radius:999px;padding:8px 18px;font:inherit;font-size:14px;cursor:pointer}
+.chip[aria-pressed=true]{background:linear-gradient(180deg,#e4ff8f,var(--lime));color:var(--ink);border-color:var(--lime);font-weight:500}
+.item{padding:18px;margin-bottom:14px}
+.item h3{font-size:19px;font-weight:700}
+.item p{color:var(--mu);font-size:14px;margin:6px 0 12px;font-weight:300}
+.meta{display:flex;gap:8px;margin-bottom:14px;font-size:12px}
+.meta span{border:1px solid var(--gb);border-radius:10px;padding:2px 10px}
+.meta span:last-child{color:var(--lt);border-color:var(--lt)}
+.row{display:flex;gap:10px}
+.share{width:52px;border:1px solid var(--gb);background:var(--g1);color:var(--tx);border-radius:18px;cursor:pointer;font-size:18px}
+.empty{color:var(--mu);text-align:center;padding:24px}
+
+.gift{margin-top:18px;padding:12px}
+.gift svg{display:block;width:100%;height:auto;border-radius:16px}
+.gtx{padding:16px 6px 6px}
+.gtx strong{display:block;font-size:22px;font-weight:700}
+.gtx p{color:var(--mu);font-size:14px;margin:4px 0 16px;font-weight:300}
+/* التواصل */
+.stack{display:grid;gap:12px;margin-top:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.link{display:flex;align-items:center;gap:14px;padding:16px;text-decoration:none}
+.link strong{display:block;font-size:17px;font-weight:700}
+.link small{display:block;color:var(--mu);font-weight:300;overflow-wrap:anywhere}
+.ico{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-weight:700;font-size:14px;color:var(--ink);background:linear-gradient(180deg,#e4ff8f,var(--lime));box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -3px 6px rgba(80,120,0,.3)}
+.big{padding:20px}.big .ico{width:56px;height:56px;border-radius:18px}.big strong{font-size:20px}
+.two .link{flex-direction:column;align-items:flex-start;gap:10px}
+.foot{text-align:center;color:var(--mu);font-size:13px;font-weight:300;padding:48px 0 8px}
+
+/* الدوك */
+.dock{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:2px;padding:6px;border-radius:999px;background:linear-gradient(135deg,var(--g1),var(--g2));border:1px solid var(--gb);box-shadow:inset 0 1.5px 0 var(--gh),0 14px 34px var(--gs);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6)}
+.dock a{padding:10px 15px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:500;white-space:nowrap;transition:background .25s,color .25s}
+.dock a.on{color:var(--ink);background:linear-gradient(180deg,#e4ff8f,var(--lime) 55%,#a8e61a);box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -3px 6px rgba(80,120,0,.3)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--lime);color:var(--ink);font-weight:700;padding:10px 20px;border-radius:99px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:40}
+.toast.on{opacity:1}
+
+/* لحظة الافتتاح */
+@media (prefers-reduced-motion:no-preference){
+.name span{animation:rev .9s cubic-bezier(.2,.8,.2,1) both}
+.name i{animation:pop .4s .7s cubic-bezier(.3,1.6,.5,1) both}
+.ph{animation:pop .7s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes rev{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+@keyframes pop{from{transform:scale(0);opacity:0}}}
+</style>
+</head>
+<body>
+<div class="rule" aria-hidden="true"><b id="tc">00:00:00</b><div class="head" id="head"></div></div>
+
+<main class="wrap">
+<header class="hero" id="top">
+  <div class="ph"><svg class="mk" viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2ffb8"/><stop offset=".5" stop-color="#c6ff3d"/><stop offset="1" stop-color="#6fb800"/></linearGradient><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g fill="none" stroke="#c6ff3d" stroke-linejoin="round" stroke-width="14"><path d="M72 110v292l230-146z" opacity=".25"/><path d="M136 110v292l230-146z" opacity=".5"/></g><path d="M200 110v292l230-146z" fill="url(#lg)" stroke="url(#lg)" stroke-width="36" stroke-linejoin="round"/><path d="M222 154v84l108-42z" fill="url(#hg)" opacity=".7"/><path d="M430 66l9 24 24 9-24 9-9 24-9-24-24-9 24-9z" fill="#eaffa0"/></svg><img src="photo.jpg" alt="BOKA" onerror="this.remove()"></div>
+  <h1 class="name"><span>BOKA</span><i></i><i></i><i></i><i></i></h1>
+  <p class="role">Motion Designer &amp; Video Editor</p>
+  <p class="tag">بحرّك الفكرة لحد ما تتكلم</p>
+  <p class="sub">موشن جرافيك ومونتاج بيشدّ العين من أول ثانية. أحمد الدسوقي</p>
+  <div class="cta">
+    <a class="btn" href="https://wa.me/201044982190" target="_blank" rel="noopener">كلمني واتساب</a>
+    <a class="btn ghost" href="#files">الملحقات</a>
+  </div>
+</header>
+
+<section class="sec">
+  <h2>بقدّملك إيه</h2>
+  <div class="grid">
+    <div class="svc gl"><h3>موشن جرافيك</h3><p>عناوين ولوجوهات وإنفوجراف بيتحرك بنعومة.</p></div>
+    <div class="svc gl"><h3>مونتاج فيديو</h3><p>قطع وإيقاع وصوت يخلّي المشاهد يكمّل للآخر.</p></div>
+    <div class="svc gl"><h3>ريلز وتيك توك</h3><p>فيديوهات قصيرة بتمسك من أول ثانية.</p></div>
+    <div class="svc gl"><h3>إعلانات</h3><p>تقديم بصري لامع لمنتجك أو براندك.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="files">
+  <h2>الملحقات</h2>
+  <p class="sub">كل اللي محتاجه لشغلك في مكان واحد.</p>
+  <div class="gift gl">
+    <svg viewBox="0 0 320 200" role="img" aria-label="ملحقات مونتاج وتصميم">
+<defs>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaffa0"/><stop offset=".55" stop-color="#c6ff3d"/><stop offset="1" stop-color="#7fc400"/></linearGradient>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity=".08"/></linearGradient>
+<radialGradient id="r" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#c6ff3d" stop-opacity=".5"/><stop offset="1" stop-color="#c6ff3d" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="320" height="200" fill="#0e120a"/>
+<circle cx="160" cy="110" r="125" fill="url(#r)"/>
+<path d="M82 64h52l14 14h86a14 14 0 0 1 14 14v68a14 14 0 0 1-14 14H82a14 14 0 0 1-14-14V78a14 14 0 0 1 14-14z" fill="url(#a)"/>
+<rect x="70" y="36" width="64" height="48" rx="12" fill="url(#g)" stroke="#fff" stroke-opacity=".6"/>
+<path d="M94 50v20l18-10z" fill="#c6ff3d"/>
+<rect x="186" y="30" width="64" height="48" rx="12" fill="url(#g)" stroke="#fff" stroke-opacity=".6"/>
+<path d="M198 64C208 36 226 74 238 46" fill="none" stroke="#c6ff3d" stroke-width="3" stroke-linecap="round"/>
+<rect x="194" y="60" width="7" height="7" fill="#0e120a" stroke="#c6ff3d" stroke-width="2"/><rect x="235" y="42" width="7" height="7" fill="#0e120a" stroke="#c6ff3d" stroke-width="2"/>
+<rect x="68" y="96" width="184" height="76" rx="16" fill="url(#g)" stroke="#fff" stroke-opacity=".65"/>
+<path d="M82 112h56M82 126h92" stroke="#fff" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+<path d="M270 40l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#eaffa0"/>
+</svg>
+    <div class="gtx">
+      <strong>ملحقات مونتاج وتصميم</strong>
+      <p>ملفات وإضافات جاهزة تسرّع شغلك وتفرق في النتيجة.</p>
+      <a class="btn" id="gift" href="#">افتح الملحقات</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <h2>تواصل معايا</h2>
+  <p class="sub">للشغل والاستفسارات.</p>
+  <div class="stack">
+    <a class="link big gl" href="https://wa.me/201044982190" target="_blank" rel="noopener"><span class="ico">WA</span><span><strong>واتساب</strong><small>رد سريع على الشغل والاستفسارات</small></span></a>
+    <div class="two">
+      <a class="link gl" href="https://youtube.com/@nox1688" target="_blank" rel="noopener"><span class="ico">YT</span><span><strong>يوتيوب</strong><small>@nox1688</small></span></a>
+      <a class="link gl" href="https://tiktok.com/@5_9_v" target="_blank" rel="noopener"><span class="ico">TT</span><span><strong>تيك توك</strong><small>@5_9_v</small></span></a>
+    </div>
+    <a class="link gl" href="mailto:ahmeddsoky686@gmail.com"><span class="ico">@</span><span><strong>إيميل</strong><small>ahmeddsoky686@gmail.com</small></span></a>
+  </div>
+</section>
+<footer class="foot">© 2026 BOKA، أحمد الدسوقي</footer>
+</main>
+
+<nav class="dock" aria-label="التنقل">
+  <a href="#top" class="on">الرئيسية</a><a href="#files">الملحقات</a><a href="#contact">تواصل</a>
+</nav>
+<div class="toast" id="toast">تم نسخ الرابط</div>
+
+<script>
+// حط رابط الملحقات هنا
+var GIFT_LINK="";
+(function(){var a=document.getElementById("gift");
+ if(GIFT_LINK){a.href=GIFT_LINK;a.target="_blank";a.rel="noopener"}
+ else a.onclick=function(e){e.preventDefault();var t=document.getElementById("toast");t.textContent="الرابط هيتضاف قريب";t.classList.add("on");setTimeout(function(){t.classList.remove("on")},1600)}})();
+
+// التايم لاين: الشريط اللي فوق بيتحرك مع السكرول
+var head=document.getElementById("head"),tc=document.getElementById("tc"),busy=false;
+function pad(n){return(n<10?"0":"")+n}
+function tick(){
+ busy=false;
+ var d=document.documentElement,max=d.scrollHeight-innerHeight,p=max>0?Math.min(1,Math.max(0,scrollY/max)):0;
+ head.style.transform="translateX("+(p*(innerWidth-2)).toFixed(1)+"px)";
+ var s=p*30,sec=Math.floor(s);tc.textContent="00:"+pad(sec)+":"+pad(Math.floor((s-sec)*30));
+}
+addEventListener("scroll",function(){if(!busy){busy=true;requestAnimationFrame(tick)}},{passive:true});
+addEventListener("resize",tick);tick();
+
+// الدوك: القسم الحالي
+var links=document.querySelectorAll(".dock a");
+try{
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;
+  links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)});
+ })},{rootMargin:"-45% 0px -50% 0px"});
+ ["top","files","contact"].forEach(function(id){io.observe(document.getElementById(id))});
+}catch(e){}
+</script>
+</body>
+</html>
